@@ -1,1 +1,48 @@
-<p>nav works!</p>
+<section class="contact-nav">
+  <div class="container">
+    <div class="contact-info">
+        <div class="phone">Tel. Nr.:<a href="tel:+49 (0) 351-847 1552">+49 (0) 351-847 1552 </a>
+        </div>
+        <div class="email">
+          E-Mail: 
+          <a href="mailto:info@iskander-lbc.com">info@iskander-lbc.com</a>
+        </div>
+    </div>
+
+    <div class="language">
+        <a class="nav-link dropdown-toggle d-flex align-items-center mt-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="assets/Vector.svg" alt="" srcset="">
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item">GR</a></li>
+          <li><a class="dropdown-item">AR</a></li>
+        </ul>
+    </div>
+  </div>
+</section>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="assets/Group.svg" alt="" srcset="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/wer-wir-sind']">Wer wir sind</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/wer-wir-tun']">Was wir tun</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <button class="btn bg-white" type="button">Kontakt</button>
+      </form>
+    </div>
+  </div>
+</nav>

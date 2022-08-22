@@ -1,0 +1,45 @@
+@import '../../../../styles.scss';
+.contact-nav {
+  background-color: $main-theme-bright;
+  padding-block: 12px;
+  .container {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    .contact-info {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      font-size: 13.28px;
+      line-height: 24.14px;
+      font-weight: 500;
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 13.28px;
+        line-height: 24.14px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+nav {
+  background-color: $main-theme;
+  padding-block: 15px;
+  .navbar-nav {
+    gap: 28.8px;
+  }
+  .navbar-collapse {
+    gap: 19.9px;
+  }
+  .nav-link {
+    color: #fff;
+    transition: all .3s ease-in-out;
+    &:hover {
+      border-bottom: solid 1px #fff;
+    }
+  }
+  button {
+    color: $main-theme;
+  }
+}

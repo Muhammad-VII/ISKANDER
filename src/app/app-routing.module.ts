@@ -12,8 +12,8 @@ import { WhoWeAreComponent } from './Components/who-we-are/who-we-are.component'
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'what-we-do', component: WhatWeDoComponent },
-  { path: 'who-we-are', component: WhoWeAreComponent },
+  { path: 'wer-wir-sind', component: WhatWeDoComponent },
+  { path: 'wer-wir-tun', component: WhoWeAreComponent },
   { path: 'impressum', component: ImpressumComponent },
   { path: 'datenschutz', component: DatenschutzComponent },
   { path: 'contact', component: ContactComponent },

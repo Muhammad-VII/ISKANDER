@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +13,9 @@ import { ContactComponent } from './Components/contact/contact.component';
 import { SupportForForeignCompaniesComponent } from './Components/services/support-for-foreign-companies/support-for-foreign-companies.component';
 import { HomeComponent } from './Components/home/home.component';
 import { NotfoundComponent } from './Components/shared/notfound/notfound.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,15 @@ import { NotfoundComponent } from './Components/shared/notfound/notfound.compone
     SupportForForeignCompaniesComponent,
     NotfoundComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CarouselModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
