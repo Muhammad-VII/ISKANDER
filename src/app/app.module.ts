@@ -1,18 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavComponent } from './Components/shared/nav/nav.component';
+import { FooterComponent } from './Components/shared/footer/footer.component';
+import { WhatWeDoComponent } from './Components/what-we-do/what-we-do.component';
+import { WhoWeAreComponent } from './Components/who-we-are/who-we-are.component';
+import { ImpressumComponent } from './Components/impressum/impressum.component';
+import { DatenschutzComponent } from './Components/datenschutz/datenschutz.component';
+import { ContactComponent } from './Components/contact/contact.component';
+import { SupportForForeignCompaniesComponent } from './Components/services/support-for-foreign-companies/support-for-foreign-companies.component';
+import { HomeComponent } from './Components/home/home.component';
+import { NotfoundComponent } from './Components/shared/notfound/notfound.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NavComponent,
+    FooterComponent,
+    WhatWeDoComponent,
+    WhoWeAreComponent,
+    ImpressumComponent,
+    DatenschutzComponent,
+    ContactComponent,
+    SupportForForeignCompaniesComponent,
+    NotfoundComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
