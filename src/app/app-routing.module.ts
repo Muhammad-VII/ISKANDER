@@ -10,8 +10,8 @@ import { WhatWeDoComponent } from './Components/what-we-do/what-we-do.component'
 import { WhoWeAreComponent } from './Components/who-we-are/who-we-are.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
+  { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: 'wer-wir-sind', component: WhatWeDoComponent },
   { path: 'wer-wir-tun', component: WhoWeAreComponent },
   { path: 'impressum', component: ImpressumComponent },
@@ -22,9 +22,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    useHash: true
-  })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
