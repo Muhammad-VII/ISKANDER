@@ -175,7 +175,7 @@
         position: relative;
         overflow: hidden;
         img {
-          transition: scale .5s ease-in-out;
+          transition: scale 0.5s ease-in-out;
         }
         .layer {
           position: absolute;
@@ -184,8 +184,8 @@
           opacity: 0;
           width: 100%;
           height: 100%;
-          background-color: rgba($color: #000000, $alpha: .6);
-          transition: opacity .5s ease-in-out;
+          background-color: rgba($color: #000000, $alpha: 0.6);
+          transition: opacity 0.5s ease-in-out;
         }
         &:hover {
           .layer {
@@ -195,7 +195,6 @@
             scale: 1.1;
           }
         }
-
       }
       img {
         width: 100%;
@@ -210,6 +209,58 @@
         text-align: center;
         padding: 17px 0px;
       }
+    }
+  }
+}
+
+.partnership-section {
+  padding: 3rem 0rem;
+  .img-card {
+    position: relative;
+    overflow: hidden;
+    img {
+      transition: scale 0.5s ease-in-out;
+      scale: 1.05;
+    }
+    .layer {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      transition: opacity 0.5s ease-in-out;
+    }
+    &:hover {
+      .layer {
+        opacity: 1;
+      }
+      img {
+        scale: 1.1;
+      }
+    }
+  }
+  header {
+    margin-bottom: 2rem;
+    h2 {
+      font-family: Lato;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 22px;
+      letter-spacing: 0px;
+      color: $main-theme;
+    }
+  }
+  article {
+    p {
+      font-family: Lato;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: 0px;
+      text-align: left;
+      color: #5F5F7A;
     }
   }
 }
