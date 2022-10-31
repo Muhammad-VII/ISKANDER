@@ -1,7 +1,7 @@
 @import "../../../styles.scss";
 .landing {
   background-image: url(../../../assets/home-bg.svg);
-  height: 90vh;
+  height: 85vh;
   background-position: center center;
   background-size: cover;
   .landing-content {
@@ -12,7 +12,7 @@
     background-size: cover;
     header {
       h1 {
-        font-family: 'Lato';
+        font-family: "Lato";
         font-style: normal;
         font-weight: 700;
         font-size: 72px;
@@ -53,6 +53,94 @@
         &:hover {
           background-color: $main-theme-bright;
         }
+      }
+    }
+  }
+}
+
+.iskander-section {
+  padding: 2rem 0rem;
+  @media (max-width: 600px) {
+    .iskander-image {
+      display: none !important;
+    }
+  }
+  header {
+    border-left: solid $main-theme 4px;
+    padding-left: 19px;
+    h2 {
+      font-family: Lato;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 48px;
+      letter-spacing: 0px;
+      color: $main-theme;
+    }
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 26px;
+        margin-bottom: 0;
+      }
+    }
+    h4 {
+      font-family: Lato;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0px;
+      color: #171729;
+      margin-bottom: 0;
+      @media (max-width: 600px) {
+        font-size: 22px;
+        margin-bottom: 0;
+      }
+    }
+    p {
+      color: #5f5f7a;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 36px;
+      letter-spacing: 0px;
+      @media (max-width: 600px) {
+        font-size: 22px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  article {
+    p {
+      font-family: Lato;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: 0px;
+      color: #3F464B;
+    }
+    @media (max-width: 600px) {
+      margin-top: 1rem;
+      p {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }
+  figure {
+    text-align: right;
+  }
+
+  .action {
+    button {
+      height: 48px;
+      width: 161px;
+      border-radius: 4.800000190734863px;
+      padding: 9px 17px 9px 17px;
+      background-color: $main-theme;
+      color: #fff;
+      font-family: Lato;
+      border: 2px solid $main-theme;
+      &:hover {
+        background-color: transparent;
+        color: $main-theme;
       }
     }
   }
