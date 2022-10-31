@@ -114,7 +114,7 @@
       font-weight: 400;
       line-height: 30px;
       letter-spacing: 0px;
-      color: #3F464B;
+      color: #3f464b;
     }
     @media (max-width: 600px) {
       margin-top: 1rem;
@@ -141,6 +141,48 @@
       &:hover {
         background-color: transparent;
         color: $main-theme;
+      }
+    }
+  }
+}
+
+.what-we-do-section {
+  padding: 2rem 0rem;
+  background-color: #f0f9ff;
+  header {
+    margin: 25px 0px 55px 0px;
+    @media (max-width: 600px) {
+      margin: 0px 0px 32px 0px;
+    }
+    h2 {
+      font-family: Lato;
+      font-size: 40px;
+      @media (max-width: 600px) {
+        font-size: 30px;
+      }
+      font-weight: 700;
+      line-height: 21px;
+      letter-spacing: 0px;
+      text-align: left;
+      color: $main-theme;
+    }
+  }
+  article {
+    .what-we-do-card {
+      background-color: #fff;
+      border-radius: 0px 0px 5px 5px;
+      img {
+        width: 100%;
+      }
+      h4 {
+        color: $main-theme-bright;
+        font-family: Lato;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: center;
+        padding: 17px 0px;
       }
     }
   }
