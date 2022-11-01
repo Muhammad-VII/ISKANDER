@@ -7,7 +7,7 @@
   .landing-content {
     height: 100%;
     width: 100%;
-    background-image: url(../../../assets/landing-content-bg.png);
+    background-image: url(../../../assets/home/landing-content-bg.png);
     background-position: center center;
     background-size: cover;
     header {
@@ -267,6 +267,17 @@
       @media (max-width: 600px) {
         font-size: 18px;
       }
+    }
+  }
+}
+
+.contact-section {
+  padding: 2rem 0rem;
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 50px;
     }
   }
 }
