@@ -263,7 +263,7 @@
       line-height: 30px;
       letter-spacing: 0px;
       text-align: left;
-      color: #5F5F7A;
+      color: #5f5f7a;
       @media (max-width: 600px) {
         font-size: 18px;
       }
@@ -272,12 +272,67 @@
 }
 
 .contact-section {
-  padding: 2rem 0rem;
-  .contact-card {
-    display: flex;
-    flex-direction: column;
-    img {
-      width: 50px;
+  background-image: url(../../../assets/home/contact-bg.png);
+  @media (max-width: 600px) {
+    background-image: url(../../../assets/home/contact-mobile.png);
+  }
+  background-size: cover;
+  background-position: center center;
+  padding: 2.188rem 0rem;
+  header {
+    h2 {
+      font-family: Lato;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 60px;
+      letter-spacing: 0px;
+      color: $main-theme;
+      margin-bottom: 1.375rem;
+      @media (max-width: 600px) {
+        font-size: 32px;
+      }
+    }
+  }
+  article {
+    .col-md-6 {
+      margin-bottom: 3rem;
+      .contact-card {
+        display: flex;
+        flex-direction: column;
+        img {
+          width: 44px;
+          margin-bottom: 1.25rem;
+        }
+        a {
+          color: $main-theme;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+
+  .form-group {
+    margin-bottom: 1.813rem;
+  }
+  button {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .action {
+    button {
+      height: 48px;
+      width: 161px;
+      border-radius: 0;
+      padding: 9px 17px 9px 17px;
+      background-color: $main-theme;
+      color: #fff;
+      font-family: Lato;
+      border: 2px solid $main-theme;
+      &:hover {
+        background-color: transparent;
+        color: $main-theme;
+      }
     }
   }
 }
