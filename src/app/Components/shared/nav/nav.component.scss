@@ -35,8 +35,21 @@ nav {
   .nav-link {
     color: #fff;
     transition: all .3s ease-in-out;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      background-color: #fff;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      transition: width .3s ease-in-out;
+    }
     &:hover {
-      border-bottom: solid 1px #fff;
+      &::after {
+        width: 100%;
+      }
     }
   }
   button {
