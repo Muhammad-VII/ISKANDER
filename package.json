@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "^14.2.10",
     "@angular/router": "^14.2.10",
     "bootstrap": "^5.2.0",
+    "bootstrap-icons": "^1.10.2",
     "hover.css": "^2.3.2",
     "ngx-owl-carousel-o": "^14.0.1",
     "rxjs": "~7.5.0",
