@@ -1,0 +1,38 @@
+@import '../../../styles.scss';
+.datenschutz {
+  padding: 3rem 0rem;
+  h2 {
+    font-family: Lato;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    color: $main-theme;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      font-family: Lato;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+  }
+}
+
+.datenschutz-blue {
+  padding: 3rem 0rem;
+  background-color: #f0f9ff;
+  p {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+}
