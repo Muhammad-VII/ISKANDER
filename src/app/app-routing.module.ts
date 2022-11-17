@@ -8,12 +8,14 @@ import { ImpressumComponent } from './Components/impressum/impressum.component';
 import { SupportForForeignCompaniesComponent } from './Components/services/support-for-foreign-companies/support-for-foreign-companies.component';
 import { WhatWeDoComponent } from './Components/what-we-do/what-we-do.component';
 import { WhoWeAreComponent } from './Components/who-we-are/who-we-are.component';
+import { WhatWeDoDetailsComponent } from './Components/what-we-do-details/what-we-do-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', redirectTo: '', pathMatch: 'full' },
-  { path: 'wer-wir-sind', component: WhoWeAreComponent },
-  { path: 'wer-wir-tun', component: WhatWeDoComponent },
+  { path: 'was-wir-sind', component: WhoWeAreComponent },
+  { path: 'was-wir-tun', component: WhatWeDoComponent },
+  { path: 'was-wir-tun/:id', component: WhatWeDoDetailsComponent },
   { path: 'impressum', component: ImpressumComponent },
   { path: 'datenschutz', component: DatenschutzComponent },
   { path: 'kontakt', component: ContactComponent },

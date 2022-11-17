@@ -1,14 +1,6 @@
 
 
 @use '@angular/material' as mat;
-// TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.
-//  The following line adds:
-//    1. Default typography styles for all components
-//    2. Styles for typography hierarchy classes (e.g. .mat-headline-1)
-//  If you specify typography styles for the components you use elsewhere, you should delete this line.
-//  If you don't need the default component typographies but still want the hierarchy styles,
-//  you can delete this line and instead use:
-//    `@include mat.legacy-typography-hierarchy(mat.define-legacy-typography-config());`
 @include mat.all-legacy-component-typographies();
 @include mat.legacy-core();
 $ISKANDER-primary: mat.define-palette(mat.$indigo-palette);
@@ -23,7 +15,6 @@ $ISKANDER-theme: mat.define-light-theme((
 ));
 @include mat.all-legacy-component-themes($ISKANDER-theme);
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
 $main-theme: hsla(221, 91%, 26%, 1);
 $main-theme-bright: hsla(221, 81%, 34%, 1);
 $main-theme-overbright: hsl(216, 100%, 64%);

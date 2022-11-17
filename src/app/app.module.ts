@@ -16,6 +16,7 @@ import { NotfoundComponent } from './Components/shared/notfound/notfound.compone
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { WhatWeDoDetailsComponent } from './Components/what-we-do-details/what-we-do-details.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ContactComponent,
     SupportForForeignCompaniesComponent,
     NotfoundComponent,
+    WhatWeDoDetailsComponent,
   ],
   imports: [
     BrowserModule,
