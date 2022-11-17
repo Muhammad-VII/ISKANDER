@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { WhatWeDoDetailsComponent } from './Components/what-we-do-details/what-we-do-details.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { WhatWeDoDetailsComponent } from './Components/what-we-do-details/what-w
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgxSpinnerModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
