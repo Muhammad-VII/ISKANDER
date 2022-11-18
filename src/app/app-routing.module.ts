@@ -19,12 +19,16 @@ const routes: Routes = [
   { path: 'impressum', component: ImpressumComponent },
   { path: 'datenschutz', component: DatenschutzComponent },
   { path: 'kontakt', component: ContactComponent },
-  { path: 'support-for-foreign-companies', component: SupportForForeignCompaniesComponent },
-  { path: '**', component: NotfoundComponent },
+  {
+    path: 'support-for-foreign-companies',
+    component: SupportForForeignCompaniesComponent,
+  },
+  { path: '404', component: NotfoundComponent },
+  { path: '**', pathMatch: 'full', redirectTo: '404' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

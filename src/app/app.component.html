@@ -1,4 +1,4 @@
-<app-nav></app-nav>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
-<ngx-spinner bdColor = "rgba(0, 0, 0, 0.95)" size = "medium" color = "#4791FF" type = "ball-scale-multiple" [fullScreen] = "true"></ngx-spinner>
+<app-nav *ngIf="!(_Router.url.includes('404'))"></app-nav>
+<router-outlet (activate)="onActivate()"></router-outlet>
+<app-footer *ngIf="!(_Router.url.includes('404'))"></app-footer>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.95)" size="medium" color="#4791FF" type="timer" [fullScreen]="true"></ngx-spinner>
