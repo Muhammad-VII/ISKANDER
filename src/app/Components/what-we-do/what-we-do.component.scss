@@ -26,7 +26,6 @@ main {
         font-size: 32px;
       }
       gap: 10px;
-      
     }
     .breadcrumb {
       display: flex;
@@ -62,9 +61,9 @@ main {
   .row {
     align-items: center;
     @media (max-width: 768px) {
-      flex-direction: column-reverse;
+      flex-direction: column;
       .col-md-8 {
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
       }
     }
     img {
@@ -124,15 +123,16 @@ main {
 
 .founding-company {
   padding: 100px 0px;
-  background-color: #F0F9FF;
+  background-color: #f0f9ff;
   .row {
     align-items: center;
     @media (max-width: 768px) {
+      flex-direction: column-reverse;
       .col-md-8 {
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
       }
     }
-    
+
     img {
       width: 100%;
     }
@@ -193,9 +193,9 @@ main {
   .row {
     align-items: center;
     @media (max-width: 768px) {
-      flex-direction: column-reverse;
+      flex-direction: column;
       .col-md-8 {
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
       }
     }
     img {
@@ -255,15 +255,16 @@ main {
 
 .international-tax {
   padding: 100px 0px;
-  background-color: #F0F9FF;
+  background-color: #f0f9ff;
   .row {
     align-items: center;
     @media (max-width: 768px) {
+      flex-direction: column-reverse;
       .col-md-8 {
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
       }
     }
-    
+
     img {
       width: 100%;
     }
@@ -324,9 +325,9 @@ main {
   .row {
     align-items: center;
     @media (max-width: 768px) {
-      flex-direction: column-reverse;
+      flex-direction: column;
       .col-md-8 {
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
       }
     }
     img {
@@ -386,15 +387,16 @@ main {
 
 .legal-translation {
   padding: 100px 0px;
-  background-color: #F0F9FF;
+  background-color: #f0f9ff;
   .row {
     align-items: center;
     @media (max-width: 768px) {
+      flex-direction: column-reverse;
       .col-md-8 {
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
       }
     }
-    
+
     img {
       width: 100%;
     }
