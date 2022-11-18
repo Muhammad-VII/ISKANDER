@@ -18,6 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { WhatWeDoDetailsComponent } from './Components/what-we-do-details/what-we-do-details.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { SharedContactComponent } from './Components/shared/shared-contact/shared-contact.component';
+import { IskanderSectionComponent } from './Components/shared/iskander-section/iskander-section.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     SupportForForeignCompaniesComponent,
     NotfoundComponent,
     WhatWeDoDetailsComponent,
+    SharedContactComponent,
+    IskanderSectionComponent,
   ],
   imports: [
     BrowserModule,

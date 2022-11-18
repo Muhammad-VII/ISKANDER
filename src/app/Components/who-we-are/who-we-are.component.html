@@ -8,41 +8,7 @@
   </div>
 </main>
 
-<section class="iskander-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 iskander-image">
-        <img src="assets/home/iskander-section-img.png" alt="Iskander image" class="w-100">
-      </div>
-      <div class="col-md-6 d-flex flex-column justify-content-center">
-        <header>
-          <h2>Wer Wir Sind</h2>
-          <h4>Dr. jur. Sameh Iskander,</h4>
-          <p>Ägyptischer Rechtsanwalt & LL.M. Deutschland</p>
-        </header>
-
-        <article>
-          <p>
-            Dr. Iskander hat der sein juristisches Staatsexamen an der Universität Ain Shams in Kairo/ Ägypten abgelegt.
-            An der Universität Leipzig hat er einen internationalen LL.M.-Abschluss erworben und zum Internationalen
-            Privatrecht promoviert.
-            Dr. Iskander ist in Ägypten durch die Rechtsanwaltskammer Kairo zugelassener Rechtsanwalt und Mitglied der
-            Rechtsanwaltskammer Kairo.
-
-          </p>
-        </article>
-
-        <figure>
-          <img src="assets/home/Iskander.png" alt="" srcset="">
-        </figure>
-
-        <div class="action">
-          <button class="btn">Mehr Erfahren</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<app-iskander-section></app-iskander-section>
 
 <section class="partnership-section">
   <div class="container">
@@ -78,7 +44,7 @@
     <article>
       <div class="row">
         <div class="col-md-4">
-          <div class="what-we-do-card">
+          <div class="what-we-do-card" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <div class="card-img">
               <img class="w-100" src="assets/was-wir-sind/andrew's-img.png" alt="glasess image">
               <div class="layer"></div>
@@ -116,75 +82,38 @@
   </div>
 </section>
 
-<section class="contact-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <header>
-          <h2>Kontakt</h2>
-        </header>
+<app-shared-contact></app-shared-contact>
 
-        <article>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="contact-card">
-                <img class="hvr-bob" src="assets/home/Frame.png" alt="" srcset="">
-                <a>Dr. jur. Sameh Iskander
-                  Platanen str. 6, D-01129 Dresden</a>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="contact-card">
-                <img class="hvr-bob" src="assets/home/call.png" alt="" srcset="">
-                <a href="tel:+49 (0)3518471552">Telefon Nr. : +49 (0) 351 847 1552</a>
-                <a href="tel:+49 (0)3518471552">Telefax:+49 (0) 351 847 1552</a>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="contact-card">
-                <img class="hvr-bob" src="assets/home/sms-notification.png" alt="" srcset="">
-                <a target="_blank" href="mailto:info@iskander-lbc.com">info@iskander-lbc.com</a>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="contact-card">
-                <img class="hvr-bob" src="assets/home/clock.png" alt="" srcset="">
-                <a>Mo.-Fr.: 9:00 Uhr bis 16:00 Uhr</a>
-              </div>
-            </div>
-          </div>
-        </article>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgba(0, 0, 0, 0.03);">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Partner</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-
-      <div class="col-md-6">
-        <form>
-          <div class="form-group">
-            <input type="text" autocomplete="name" placeholder="Ihr Name (Pflichtfeld)" class="form-control">
+      <div class="modal-body">
+        <div class="container-fluid p-0">
+          <div class="row">
+            <div class="col-md-6 m-0 p-0">
+              <img src="assets/was-wir-sind/andrew's-img.png" alt="" class="w-100">
+            </div>
+            <div class="col-md-6">
+              <header>
+                <h2>Andrew Iskander</h2>
+                <h3>Produkt designer</h3>
+              </header>
+              <article>
+                <p>
+                  This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                  This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                  This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                </p>
+              </article>
+            </div>
           </div>
-
-          <div class="form-group">
-            <input autocomplete="email" type="email" placeholder="Ihre E-Mail-Adresse (Pflichtfeld)
-            " class="form-control">
-          </div>
-
-          <div class="form-group">
-            <input type="text" placeholder="Betreff
-            " class="form-control">
-          </div>
-
-          <div class="form-group">
-            <textarea type="text" rows="3" placeholder="Ihre Nachricht
-            " class="form-control"></textarea>
-          </div>
-
-          <div class="action">
-            <button type="submit">Senden</button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</div>
