@@ -215,6 +215,12 @@ main {
 }
 
 .modal {
+  .btn-close {
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
   .modal-content, .modal-header {
     border-radius: 3px;
   }
