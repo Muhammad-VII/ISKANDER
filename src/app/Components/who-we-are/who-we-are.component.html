@@ -47,7 +47,7 @@
     <article>
       <div class="row">
         <div class="col-md-4">
-          <div class="what-we-do-card" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <div class="what-we-do-card" data-bs-toggle="modal" data-bs-target="#first-partner">
             <div class="card-img">
               <img class="w-100" src="assets/was-wir-sind/andrew's-img.png" alt="glasess image">
               <div class="layer"></div>
@@ -57,7 +57,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="what-we-do-card">
+          <div class="what-we-do-card" data-bs-toggle="modal" data-bs-target="#second-partner">
             <div class="card-img">
               <div class="card-img">
                 <img class="w-100" src="assets/was-wir-sind/andrew's-img.png" alt="building image">
@@ -70,7 +70,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="what-we-do-card">
+          <div class="what-we-do-card" data-bs-toggle="modal" data-bs-target="#third-partner">
             <div class="card-img">
               <img class="w-100" src="assets/was-wir-sind/andrew's-img.png" alt="hands image">
 
@@ -87,12 +87,11 @@
 
 <app-shared-contact></app-shared-contact>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="first-partner" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header" style="background-color: rgba(0, 0, 0, 0.03);">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Partner</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Partner 1</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -116,11 +115,100 @@
                 is a little bit longer.
               </p>
               <div class="slide-action">
-                <button>
+                <button data-bs-toggle="modal" data-bs-target="#third-partner">
                   <img src="assets/was-wir-sind/arrow-left.png" alt="" srcset="">
                 </button>
 
-                <button>
+                <button data-bs-toggle="modal" data-bs-target="#second-partner">
+                  <img src="assets/was-wir-sind/arrow-right.png" alt="" srcset="">
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="second-partner" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgba(0, 0, 0, 0.03);">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Partner 2</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-content-wrapper">
+          <div class="modal-img">
+            <img src="assets/was-wir-sind/andrew's-img.png" alt="" class="w-100">
+          </div>
+
+          <div class="modal-text">
+            <header>
+              <h2>Andrew Iskander</h2>
+              <h3>Produkt designer</h3>
+            </header>
+            <article>
+              <p>
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                is a little bit longer.
+              </p>
+              <div class="slide-action">
+                <button data-bs-toggle="modal" data-bs-target="#first-partner">
+                  <img src="assets/was-wir-sind/arrow-left.png" alt="" srcset="">
+                </button>
+
+                <button data-bs-toggle="modal" data-bs-target="#third-partner">
+                  <img src="assets/was-wir-sind/arrow-right.png" alt="" srcset="">
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="third-partner" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgba(0, 0, 0, 0.03);">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Partner 3</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-content-wrapper">
+          <div class="modal-img">
+            <img src="assets/was-wir-sind/andrew's-img.png" alt="" class="w-100">
+          </div>
+
+          <div class="modal-text">
+            <header>
+              <h2>Andrew Iskander</h2>
+              <h3>Produkt designer</h3>
+            </header>
+            <article>
+              <p>
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                is a little bit longer.
+              </p>
+              <div class="slide-action">
+                <button data-bs-toggle="modal" data-bs-target="#second-partner">
+                  <img src="assets/was-wir-sind/arrow-left.png" alt="" srcset="">
+                </button>
+
+                <button data-bs-toggle="modal" data-bs-target="#first-partner">
                   <img src="assets/was-wir-sind/arrow-right.png" alt="" srcset="">
                 </button>
               </div>
