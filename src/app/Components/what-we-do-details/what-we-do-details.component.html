@@ -1,47 +1,45 @@
-<main>
-  <div class="main-text">
-    <h2>Was wir tun</h2>
-    <div class="breadcrumb">
-      <a routerLink="/" class="active-bread">Home</a>
-      <a routerLink="/was-wir-tun" class="active-bread"> / Was wir tun </a>
-      <a class="not-active-bread"><a class="hide-on-mob not-active-bread">/</a> Ausländischen Unternehmen</a>
-    </div>
-  </div>
-</main>
-
-<section class="foregin-companies">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <img src="assets/was-wir-tun/foregin-company.png" alt="glasses_image">
-      </div>
-
-      <div class="col-md-8">
-        <article>
-          <h3>
-            Begleitung der ausländischen Unternehmen
-          </h3>
-          <p>
-            Sie haben eine Geschäftsidee und möchten mit der auf dem Markt einsteigen? Sie wissen aber nicht, wie Sie
-            das bewerkstelligen sollen?
-            Unsere Tipps können helfen: Ob Sie sich bereits entschieden haben, das eigene Unternehmen zu gründen, oder
-            noch darüber nachdenken, womit Sie sich selbstständig machen wollen. Wir kennen die nötigen Etappen und
-            begleiten Sie gerne auf Ihrem Weg zur Existenzgründung.
-          </p>
-        </article>
+<div class="details-page" *ngIf="pageContent[0] as content">
+  <main>
+    <div class="main-text">
+      <h2>Was wir tun</h2>
+      <div class="breadcrumb">
+        <a routerLink="/" class="active-bread">Home</a>
+        <a routerLink="/was-wir-tun" class="active-bread"> / Was wir tun </a>
+        <a class="not-active-bread"><a class="hide-on-mob not-active-bread">/</a> {{content.title}}</a>
       </div>
     </div>
-
-    <article>
-      <p>
-        Sie haben eine Geschäftsidee und möchten mit der auf dem Markt einsteigen? Sie wissen aber nicht, wie Sie das
-        bewerkstelligen sollen? <br>
-        Unsere Tipps können helfen: Ob Sie sich bereits entschieden haben, das eigene Unternehmen zu gründen, oder noch
-        darüber nachdenken, womit Sie sich selbstständig machen wollen. Wir kennen die nötigen Etappen und begleiten Sie
-        gerne auf Ihrem Weg zur Existenzgründung.
-      </p>
-    </article>
-  </div>
-</section>
+  </main>
+  
+  <section class="foregin-companies">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{{content.image}}" alt="glasses_image">
+        </div>
+  
+        <div class="col-md-8">
+          <article>
+            <h3>
+              {{content.title}}
+            </h3>
+            <p>
+              {{content.body}}
+            </p>
+          </article>
+        </div>
+      </div>
+  
+      <article *ngIf="content.title == 'Begleitung der ausländischen Unternehmen'">
+        <p>
+          Sie haben eine Geschäftsidee und möchten mit der auf dem Markt einsteigen? Sie wissen aber nicht, wie Sie das
+          bewerkstelligen sollen? <br>
+          Unsere Tipps können helfen: Ob Sie sich bereits entschieden haben, das eigene Unternehmen zu gründen, oder noch
+          darüber nachdenken, womit Sie sich selbstständig machen wollen. Wir kennen die nötigen Etappen und begleiten Sie
+          gerne auf Ihrem Weg zur Existenzgründung.
+        </p>
+      </article>
+    </div>
+  </section>
+</div>
 
 <app-shared-contact></app-shared-contact>
