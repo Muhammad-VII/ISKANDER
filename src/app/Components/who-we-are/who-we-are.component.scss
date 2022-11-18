@@ -215,23 +215,49 @@ main {
 }
 
 .modal {
+  .modal-content, .modal-header {
+    border-radius: 3px;
+  }
   .modal-body {
+    padding: 0;
+    .modal-content-wrapper {
+      display: flex;
+      gap: 1rem;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+      .modal-img, .modal-text {
+        max-width: 50%;
+        @media (max-width: 768px) {
+          max-width: 100%;
+        }
+      }
+      .modal-text {
+        padding-top: 1rem;
+        @media (max-width: 768px) {
+          padding-top: 0;
+          padding: 1rem;
+        }
+      }
+    }
     header {
       h2 {
-        font-family: Helvetica Neue;
+        font-family: Lato;
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 24px;
         letter-spacing: 0em;
         text-align: left;
+        color: #212529;
       }
       h3 {
-        font-family: Helvetica Neue;
+        font-family: Lato;
         font-size: 16px;
         font-weight: 500;
         line-height: 19px;
         letter-spacing: 0em;
         text-align: left;
+        color: #6c757d;
       }
     }
     article {
@@ -242,6 +268,19 @@ main {
         line-height: 24px;
         letter-spacing: 0em;
         text-align: left;
+      }
+
+      .slide-action {
+        display: flex;
+        gap: .5rem;
+        button {
+          background-color: transparent;
+          border: none;
+          padding: 0;
+          img {
+            width: 100%;
+          }
+        }
       }
     }
   }

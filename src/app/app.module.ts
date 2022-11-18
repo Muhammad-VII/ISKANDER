@@ -20,6 +20,9 @@ import { WhatWeDoDetailsComponent } from './Components/what-we-do-details/what-w
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SharedContactComponent } from './Components/shared/shared-contact/shared-contact.component';
 import { IskanderSectionComponent } from './Components/shared/iskander-section/iskander-section.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
