@@ -42,7 +42,7 @@
       }
     }
     .header-btn {
-      button {
+      a {
         padding: 9px 17px;
         background-color: $main-theme;
         border-radius: 4.8px;
@@ -50,6 +50,8 @@
         color: #fff;
         margin-top: 22px;
         transition: background-color 0.2s ease-in-out;
+        text-decoration: none;
+        display: inline-block;
         &:hover {
           background-color: $main-theme-bright;
         }
