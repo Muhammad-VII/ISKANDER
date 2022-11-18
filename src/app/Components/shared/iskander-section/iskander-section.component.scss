@@ -1,9 +1,9 @@
 @import '../../../../styles.scss';
 .iskander-section {
   padding: 2rem 0rem;
-  @media (max-width: 600px) {
-    .iskander-image {
-      display: none !important;
+  .iskander-image {
+    @media (max-width: 768px) {
+      margin-bottom: 1rem;
     }
   }
   header {
