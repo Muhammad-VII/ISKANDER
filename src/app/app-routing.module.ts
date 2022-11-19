@@ -7,13 +7,13 @@ import { HomeComponent } from './Components/home/home.component';
 import { ImpressumComponent } from './Components/impressum/impressum.component';
 import { SupportForForeignCompaniesComponent } from './Components/services/support-for-foreign-companies/support-for-foreign-companies.component';
 import { WhatWeDoComponent } from './Components/what-we-do/what-we-do.component';
-import { WhoWeAreComponent } from './Components/who-we-are/who-we-are.component';
+import { WasWirSindComponent } from './Components/was-wir-sind/was-wir-sind.component';
 import { WhatWeDoDetailsComponent } from './Components/what-we-do-details/what-we-do-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', redirectTo: '', pathMatch: 'full' },
-  { path: 'was-wir-sind', component: WhoWeAreComponent },
+  { path: 'was-wir-sind', component: WasWirSindComponent },
   { path: 'was-wir-tun', component: WhatWeDoComponent },
   { path: 'was-wir-tun/:id', component: WhatWeDoDetailsComponent },
   { path: 'impressum', component: ImpressumComponent },
