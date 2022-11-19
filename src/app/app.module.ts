@@ -21,6 +21,10 @@ import { WhatWeDoDetailsComponent } from './Components/what-we-do-details/what-w
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SharedContactComponent } from './Components/shared/shared-contact/shared-contact.component';
 import { IskanderSectionComponent } from './Components/shared/iskander-section/iskander-section.component';
+import { LandingComponent } from './Components/shared/landing/landing.component';
+import { WasWirTunHomeComponent } from './Components/shared/was-wir-tun-home/was-wir-tun-home.component';
+import { PartnershipHomeComponent } from './Components/shared/partnership-home/partnership-home.component';
+import { WasWirSindPartnersComponent } from './Components/shared/was-wir-sind-partners/was-wir-sind-partners.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +42,10 @@ import { IskanderSectionComponent } from './Components/shared/iskander-section/i
     WhatWeDoDetailsComponent,
     SharedContactComponent,
     IskanderSectionComponent,
+    LandingComponent,
+    WasWirTunHomeComponent,
+    PartnershipHomeComponent,
+    WasWirSindPartnersComponent,
   ],
   imports: [
     BrowserModule,

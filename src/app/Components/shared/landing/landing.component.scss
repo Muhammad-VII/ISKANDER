@@ -1,0 +1,61 @@
+@import "../../../../styles.scss";
+.landing {
+  background-image: url(../../../../assets/home-bg.svg);
+  height: 85vh;
+  background-position: center center;
+  background-size: cover;
+  .landing-content {
+    height: 100%;
+    width: 100%;
+    background-image: url(../../../../assets/home/landing-content-bg.png);
+    background-position: center center;
+    background-size: cover;
+    header {
+      h1 {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 86px;
+        letter-spacing: 0.239208px;
+        text-transform: uppercase;
+        color: $main-theme;
+        @media screen and (max-width: 768px) {
+          font-size: 48px;
+          line-height: 60px;
+        }
+      }
+      h3 {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: 0.134101px;
+        color: #3f464b;
+        max-width: 50%;
+        @media screen and (max-width: 768px) {
+          font-size: 24px;
+          line-height: 30px;
+          max-width: 100%;
+        }
+      }
+    }
+    .header-btn {
+      a {
+        padding: 9px 17px;
+        background-color: $main-theme;
+        border-radius: 4.8px;
+        border: none;
+        color: #fff;
+        margin-top: 22px;
+        transition: background-color 0.2s ease-in-out;
+        text-decoration: none;
+        display: inline-block;
+        &:hover {
+          background-color: $main-theme-bright;
+        }
+      }
+    }
+  }
+}
