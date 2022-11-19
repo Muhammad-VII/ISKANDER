@@ -21,7 +21,6 @@ import { WhatWeDoDetailsComponent } from './Components/what-we-do-details/what-w
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SharedContactComponent } from './Components/shared/shared-contact/shared-contact.component';
 import { IskanderSectionComponent } from './Components/shared/iskander-section/iskander-section.component';
-import { HotToastModule } from '@ngneat/hot-toast';
 
 @NgModule({
   declarations: [
@@ -50,9 +49,6 @@ import { HotToastModule } from '@ngneat/hot-toast';
     ReactiveFormsModule,
     CarouselModule,
     HttpClientModule,
-    HotToastModule.forRoot({
-      dismissible: true,
-    })
   ],
   providers: [],
   bootstrap: [AppComponent],

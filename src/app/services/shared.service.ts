@@ -15,6 +15,6 @@ export class SharedService {
   }
 
   getAllContactMessages(): Observable<any> {
-    return this._HttpClient.get('https://ng-cms-dashboard.herokuapp.com/shared/getAllContactMessages?skip=0&limit=10')
+    return this._HttpClient.get(`${environment.apiUrl}/shared/getAllContactMessages?skip=0&limit=10`)
   }
 }

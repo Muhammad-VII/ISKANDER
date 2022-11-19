@@ -4,7 +4,6 @@ import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { ChangeDetectionStrategy } from '@angular/core';
-import { HotToastService } from '@ngneat/hot-toast';
 
 @Component({
   selector: 'app-shared-contact',
@@ -15,9 +14,10 @@ import { HotToastService } from '@ngneat/hot-toast';
 })
 export class SharedContactComponent implements OnInit, OnDestroy {
   subscribtions$: Subscription[] = [];
+
   constructor(
+    private _SpinnerService: NgxSpinnerService,
     private _SharedService: SharedService,
-    private toast: HotToastService
   ) {}
 
   contactForm: FormGroup = new FormGroup({
@@ -32,29 +32,27 @@ export class SharedContactComponent implements OnInit, OnDestroy {
     ]),
   });
 
+  showSuccessBtn: boolean = false
   submitContactForm() {
+    this._SpinnerService.show();
     if (!this.contactForm.valid) {
     } else {
       this.subscribtions$.push(
-        this._SharedService.sendContactForm(this.contactForm.value).pipe(
-          this.toast.observe({
-            loading: 'Sending...',
-            success: 'Sent successfully',
-            error: 'Could not send.',
-          })
-        ).subscribe({
+        this._SharedService.sendContactForm(this.contactForm.value).subscribe({
           next: (val) => {
-            this.contactForm.reset()
+            this._SpinnerService.hide();
+            this.contactForm.reset();
+            this.showSuccessBtn = true
           },
           error: (err) => {
-            console.log(err);
+            this._SpinnerService.hide();
           },
         })
       );
     }
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   ngOnDestroy(): void {
     this.subscribtions$.forEach((sub) => sub.unsubscribe());
