@@ -42,28 +42,34 @@
       </div>
 
       <div class="col-md-6">
-        <form>
+        <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()">
           <div class="form-group">
-            <input type="text" autocomplete="name" placeholder="Ihr Name (Pflichtfeld)" class="form-control">
+            <input type="text" formControlName="name" autocomplete="name" placeholder="Ihr Name (Pflichtfeld)" class="form-control">
+            <div class="text-danger" style="font-size: 14px; margin:.1rem 0rem 0rem .3rem;" *ngIf="contactForm.controls['name'].errors?.['minlength']">Name is required</div>
           </div>
 
           <div class="form-group">
-            <input autocomplete="email" type="email" placeholder="Ihre E-Mail-Adresse (Pflichtfeld)
+            <input formControlName="email" autocomplete="email" type="email" placeholder="Ihre E-Mail-Adresse (Pflichtfeld)
             " class="form-control">
+            <div class="text-danger" style="font-size: 14px; margin:.1rem 0rem 0rem .3rem;" *ngIf="contactForm.controls['email'].errors?.['minlength']">Email is required</div>
+            <div class="text-warning" style="font-size: 14px; margin:.1rem 0rem 0rem .3rem;" *ngIf="contactForm.controls['email'].errors?.['email']">Email format isn't correct</div>
           </div>
 
           <div class="form-group">
-            <input type="text" placeholder="Betreff
+            <input formControlName="subject" type="text" placeholder="Betreff
             " class="form-control">
+            <div class="text-danger" style="font-size: 14px; margin:.1rem 0rem 0rem .3rem;" *ngIf="contactForm.controls['subject'].errors?.['minlength']">Subject is required</div>
           </div>
 
           <div class="form-group">
-            <textarea type="text" rows="3" placeholder="Ihre Nachricht
+            <textarea formControlName="message" type="text" rows="3" placeholder="Ihre Nachricht
             " class="form-control"></textarea>
+
+            <div class="text-danger" style="font-size: 14px; margin:.1rem 0rem 0rem .3rem;" *ngIf="contactForm.controls['message'].errors?.['minlength']">Message is required</div>
           </div>
 
           <div class="action">
-            <button type="submit">Senden</button>
+            <button title="Please fill the above form with the correct data first" type="submit" [disabled]="!contactForm.valid">Senden</button>
           </div>
         </form>
       </div>

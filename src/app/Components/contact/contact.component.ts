@@ -1,4 +1,4 @@
-import { NgxSpinnerService } from 'ngx-spinner';
+import { SharedService } from './../../services/shared.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() {}
+  constructor(private _SharedService: SharedService) {
+
+  }
 
   ngOnInit(): void {
 

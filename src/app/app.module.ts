@@ -2,6 +2,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NavComponent } from './Components/shared/nav/nav.component';
 import { FooterComponent } from './Components/shared/footer/footer.component';
@@ -20,9 +21,7 @@ import { WhatWeDoDetailsComponent } from './Components/what-we-do-details/what-w
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SharedContactComponent } from './Components/shared/shared-contact/shared-contact.component';
 import { IskanderSectionComponent } from './Components/shared/iskander-section/iskander-section.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { HotToastModule } from '@ngneat/hot-toast';
 
 @NgModule({
   declarations: [
@@ -50,6 +49,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     FormsModule,
     ReactiveFormsModule,
     CarouselModule,
+    HttpClientModule,
+    HotToastModule.forRoot({
+      dismissible: true,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],
