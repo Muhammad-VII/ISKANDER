@@ -12,4 +12,9 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeLanguage(lang: string) {
+    localStorage.setItem('lang', lang);
+    window.location.reload();
+  }
+
 }
