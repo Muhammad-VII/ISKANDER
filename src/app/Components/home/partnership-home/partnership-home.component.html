@@ -1,21 +1,21 @@
-<section class="partnership-section"  [ngClass]="{'bg-blue': bgColor === true, 'bg-transpearnt' : bgColor === false }">
+<section class="partnership-section" [hidden]="data?.hidden"  [ngClass]="{'bg-blue': bgColor === true, 'bg-transpearnt' : bgColor === false }">
   <div class="container">
     <div class="row">
       <div class="col-md-6 d-flex flex-column justify-content-center">
         <header>
-          <h2>Partnerschaften</h2>
+          <h2>{{data?.title}}</h2>
         </header>
 
         <article>
           <p>
-            Ihr Ziel ist für uns sehr wichtig. Sie wollen in Ägypten oder in Deutschland neue Projekt beginnen, Immobilen kaufen oder eine Handelsvertretung gründen. Sie brauchen vielleicht eine gebrauchte gerichtliche Vertretung oder die Anerkennung Ihres Gerichtsurteils in Ägypten. Lassen Sie sich vor Ort begleiten.   Iskander-lbc kooperieret mit Anwälten und Steuerberater, die in Deutschland und in Ägypten tätig sind.
+            {{data?.description}}
           </p>
         </article>
       </div>
 
       <div class="col-md-6">
         <div class="img-card">
-          <img src="assets/home/partnership.png" class="w-100" alt="">
+          <img src="{{data?.image}}" class="w-100" alt="">
           <div class="layer"></div>
         </div>
       </div>

@@ -7,5 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class PartnershipHomeComponent {
   @Input()
-  bgColor: boolean = false
+  bgColor: boolean = false;
+  @Input()
+  data: any;
 }
