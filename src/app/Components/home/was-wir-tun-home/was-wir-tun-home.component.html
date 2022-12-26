@@ -1,49 +1,24 @@
-<section class="what-we-do-section">
+<section class="what-we-do-section" [hidden]="data?.hidden">
   <div class="container">
     <header>
-      <h2>Was wir tun</h2>
+      <h2>{{data?.title}}</h2>
     </header>
 
     <article>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 mb-2" *ngFor="let card of data?.media">
           <div class="what-we-do-card">
             <div class="card-img">
-              <img class="w-100" src="assets/home/glasses.png" alt="glasess image">
+              <img class="w-100" src="{{card?.image}}" alt="glasess image">
               <div class="layer"></div>
             </div>
-            <h4>Begleitung der
-              ausländischen Unternehmen</h4>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="what-we-do-card">
-            <div class="card-img">
-              <div class="card-img">
-                <img class="w-100" src="assets/home/building.png" alt="building image">
-                <div class="layer"></div>
-              </div>
-              <div class="layer"></div>
-            </div>
-            <h4>Unterstützung bei
-              Firmengründung</h4>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="what-we-do-card">
-            <div class="card-img">
-            <img class="w-100" src="assets/home/hands.png" alt="hands image">
-
-              <div class="layer"></div>
-            </div>
-            <h4>Internationale
-              Steuerangelegenheiten</h4>
+            <h4>{{card?.title}}</h4>
           </div>
         </div>
       </div>
     </article>
     
-    <div class="link-section">
+    <div class="link-section" [hidden]="data?.btnHidden">
       <a [routerLink]="['/was-wir-tun']">
         Alle ansehen <i class="bi bi-arrow-right"></i>
       </a>

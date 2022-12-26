@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./iskander-section.component.scss']
 })
 export class IskanderSectionComponent {
-  @Input() showBtn: boolean = false
+  @Input() data: any;
 }

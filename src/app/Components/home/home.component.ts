@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  homeData: any[] = [];
   constructor(private _SharedService: SharedService) { 
     this._SharedService.getHomePageData().subscribe((res: any) => {
-      console.log(res)
+      this.homeData = res.data;
+      console.log(res.data);
     })
   }
 
