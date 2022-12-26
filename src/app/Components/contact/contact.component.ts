@@ -1,3 +1,4 @@
+import { map } from 'rxjs';
 import { SharedService } from './../../services/shared.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,6 +12,10 @@ export class ContactComponent implements OnInit {
   constructor(private _SharedService: SharedService) {
 
   }
+
+  contactPageData$ = this._SharedService.getContactPageData().pipe(
+    map((res: any) => res.data[0])
+  );
 
   ngOnInit(): void {
 

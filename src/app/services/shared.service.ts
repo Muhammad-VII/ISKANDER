@@ -26,4 +26,8 @@ export class SharedService {
   getWasWirTunPageData(): Observable<any> {
     return this._HttpClient.get(`${environment.apiUrl}/war-wir-tun/getAllSections-${this.lang}?limit=10&skip=0`)
   }
+
+  getContactPageData(): Observable<any> {
+    return this._HttpClient.get(`${environment.apiUrl}/contact-page/getAllSections-${this.lang}?limit=10&skip=0`)
+  }
 }

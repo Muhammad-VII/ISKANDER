@@ -8,24 +8,24 @@
   </div>
 </main>
 
-<section class="partnership-section">
-  <div class="container">
+<section class="partnership-section" *ngIf="contactPageData$ | async as contact">
+  <div class="container" [hidden]="contact?.hidden">
     <div class="row">
       <div class="col-md-6 d-flex flex-column justify-content-center">
         <header>
-          <h2>RUFEN SIE UNS AN</h2>
+          <h2>{{contact?.title}}</h2>
         </header>
 
         <article>
           <p>
-            Wir sind hier, um Ihnen bei der Beantwortung Ihrer Fragen zu helfen. Rechts- und Steuerangelegenheiten können kompliziert sein. Unsere Experten informieren Sie gerne über alle Aspekte Ihres Themas. Wir sind sehr stolz darauf, unser Fachwissen für Sie einzusetzen und freuen uns darauf, von Ihnen zu hören.
+            {{contact?.description}}
           </p>
         </article>
       </div>
 
       <div class="col-md-6">
         <div class="img-card">
-          <img src="assets/kontakt/mobile.png" class="w-100" alt="">
+          <img src="{{contact?.image}}" class="w-100" alt="">
           <div class="layer"></div>
         </div>
       </div>
