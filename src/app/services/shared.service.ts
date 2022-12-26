@@ -18,4 +18,8 @@ export class SharedService {
   getHomePageData(): Observable<any> {
     return this._HttpClient.get(`${environment.apiUrl}/home/getAllSections-${this.lang}?limit=10&skip=0`)
   }
+
+  getWasWirSindPageData(): Observable<any> {
+    return this._HttpClient.get(`${environment.apiUrl}/war-wir-sind/getAllSections-${this.lang}?limit=10&skip=0`)
+  }
 }

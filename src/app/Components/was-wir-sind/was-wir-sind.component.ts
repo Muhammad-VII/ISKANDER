@@ -1,3 +1,5 @@
+import { map } from 'rxjs';
+import { SharedService } from './../../services/shared.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./was-wir-sind.component.scss']
 })
 export class WasWirSindComponent implements OnInit {
-
-  constructor() { }
+  wasWirSindData$ = this._SharedService.getWasWirSindPageData().pipe(
+    map((res: any) => res.data)
+  );
+  constructor(private _SharedService: SharedService) { 
+    
+  }
 
   ngOnInit(): void {
   }
