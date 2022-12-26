@@ -11,10 +11,6 @@ export class SharedService {
   constructor(private _HttpClient: HttpClient) { }
 
   sendContactForm(contactForm: {}): Observable<any> {
-    return this._HttpClient.post(`${environment.apiUrl}/shared/contactUs`, contactForm)
-  }
-
-  getAllContactMessages(): Observable<any> {
-    return this._HttpClient.get(`${environment.apiUrl}/shared/getAllContactMessages?skip=0&limit=10`)
+    return this._HttpClient.post(`${environment.apiUrl}/contact/addMessage`, contactForm)
   }
 }
