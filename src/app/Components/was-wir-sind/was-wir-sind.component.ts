@@ -11,6 +11,8 @@ export class WasWirSindComponent implements OnInit {
   wasWirSindData$ = this._SharedService.getWasWirSindPageData().pipe(
     map((res: any) => res.data)
   );
+  lang: string = localStorage.getItem('lang')! ?? 'due';
+
   constructor(private _SharedService: SharedService) { 
     
   }

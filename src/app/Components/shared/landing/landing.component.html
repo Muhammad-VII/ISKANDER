@@ -8,7 +8,9 @@
         </h3>
       </header>
       <div class="header-btn" [hidden]="data?.btnHidden">
-        <a [routerLink]="['/was-wir-sind']">Mehr Erfahren</a>
+        <a *ngIf="lang == 'due'" [routerLink]="['/was-wir-sind']">Mehr Erfahren</a>
+        <a *ngIf="lang == 'en'" [routerLink]="['/was-wir-sind']">Learn more</a>
+        <a *ngIf="lang == 'ar'" [routerLink]="['/was-wir-sind']">اعرف اكثر</a>
       </div>
     </div>
   </div>

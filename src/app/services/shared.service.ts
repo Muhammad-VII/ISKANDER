@@ -9,7 +9,14 @@ import { Observable } from 'rxjs';
 export class SharedService {
   lang: string = localStorage.getItem('lang')! ?? 'due';
 
-  constructor(private _HttpClient: HttpClient) { }
+  constructor(private _HttpClient: HttpClient) { 
+    if (this.lang == 'ar') {
+      document.dir = 'rtl';
+    } else {
+      document.dir = 'ltr';
+    }
+    document.querySelector('html')?.setAttribute('lang', this.lang);
+  }
 
   sendContactForm(contactForm: {}): Observable<any> {
     return this._HttpClient.post(`${environment.apiUrl}/contact/addMessage`, contactForm)

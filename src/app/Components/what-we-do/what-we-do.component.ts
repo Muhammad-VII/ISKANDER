@@ -11,6 +11,8 @@ export class WhatWeDoComponent implements OnInit {
   whatWeDoData$ = this._SharedService.getWasWirTunPageData().pipe(
     map((res: any) => res.data)
   );
+  lang: string = localStorage.getItem('lang')! ?? 'due';
+
   constructor(private _SharedService: SharedService) { }
 
   ngOnInit(): void {

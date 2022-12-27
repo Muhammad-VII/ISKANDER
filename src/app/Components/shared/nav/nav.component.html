@@ -10,13 +10,19 @@
     </div>
 
     <div class="language">
-        <a class="nav-link dropdown-toggle d-flex align-items-center mt-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle d-flex align-items-center mt-1" [class.flex-row-reverse]="lang == 'ar'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="assets/Vector.svg" alt="" srcset="">
         </a>
-        <ul class="dropdown-menu">
+        <ul *ngIf="lang == 'due' || lang == 'en'" class="dropdown-menu">
           <li><a class="dropdown-item" (click)="changeLanguage('due')">GR</a></li>
           <li><a class="dropdown-item" (click)="changeLanguage('en')">EN</a></li>
           <li><a class="dropdown-item" (click)="changeLanguage('ar')">AR</a></li>
+        </ul>
+
+        <ul *ngIf="lang == 'ar'" class="dropdown-menu">
+          <li><a class="dropdown-item" (click)="changeLanguage('due')">الالمانية</a></li>
+          <li><a class="dropdown-item" (click)="changeLanguage('en')">الانجليزية</a></li>
+          <li><a class="dropdown-item" (click)="changeLanguage('ar')">العربية</a></li>
         </ul>
     </div>
   </div>
@@ -31,7 +37,7 @@
       "></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <ul *ngIf="lang == 'due'" class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
         </li>
@@ -42,8 +48,34 @@
           <a class="nav-link" [routerLink]="['/was-wir-tun']">Was wir tun</a>
         </li>
       </ul>
+
+      <ul *ngIf="lang == 'en'" class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/was-wir-sind']">Who we are</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/was-wir-tun']">What we do</a>
+        </li>
+      </ul>
+
+      <ul *ngIf="lang == 'ar'" class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']">الصفحة الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/was-wir-sind']">من نحن</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/was-wir-tun']">ما نقوم به</a>
+        </li>
+      </ul>
       <form class="d-flex" role="search">
-        <a class="btn bg-white" type="button" [routerLink]="['/kontakt']">kontakt</a>
+        <a *ngIf="lang == 'due'" class="btn bg-white" type="button" [routerLink]="['/kontakt']">kontakt</a>
+        <a *ngIf="lang == 'en'" class="btn bg-white" type="button" [routerLink]="['/kontakt']">Contact</a>
+        <a *ngIf="lang == 'ar'" class="btn bg-white" type="button" [routerLink]="['/kontakt']">تواصل معنا</a>
       </form>
     </div>
   </div>
@@ -58,7 +90,7 @@
   </div>
   <div class="offcanvas-body">
     <div>
-      <ul class="navbar-nav m-auto mb-2 mb-lg-0 gap-3 justify-content-center">
+      <ul *ngIf="lang == 'due'" class="navbar-nav m-auto mb-2 mb-lg-0 gap-3 justify-content-center">
         <li class="nav-item">
           <a data-bs-dismiss="offcanvas" class="nav-link" aria-current="page" [routerLink]="['/']">{{'Home'}} <i class="bi bi-arrow-right"></i></a>
         </li>
@@ -74,6 +106,45 @@
 
         <li class="nav-item">
           <a data-bs-dismiss="offcanvas" class="nav-link" [routerLink]="['/kontakt']">{{'Kontakt'}} <i class="bi bi-arrow-right"></i></a>
+        </li>
+      </ul>
+
+
+      <ul *ngIf="lang == 'en'" class="navbar-nav m-auto mb-2 mb-lg-0 gap-3 justify-content-center">
+        <li class="nav-item">
+          <a data-bs-dismiss="offcanvas" class="nav-link" aria-current="page" [routerLink]="['/']">{{'Home'}} <i class="bi bi-arrow-right"></i></a>
+        </li>
+        
+        <li class="nav-item">
+          <a data-bs-dismiss="offcanvas" class="nav-link" [routerLink]="['/was-wir-sind']">{{'Was wir sind'}} <i class="bi bi-arrow-right"></i></a>
+        </li>
+
+        <li class="nav-item">
+          <a data-bs-dismiss="offcanvas" class="nav-link"
+            [routerLink]="['/was-wir-tun']">{{'Was wir tun'}} <i class="bi bi-arrow-right"></i></a>
+        </li>
+
+        <li class="nav-item">
+          <a data-bs-dismiss="offcanvas" class="nav-link" [routerLink]="['/kontakt']">{{'Kontakt'}} <i class="bi bi-arrow-right"></i></a>
+        </li>
+      </ul>
+
+      <ul *ngIf="lang == 'ar'" class="navbar-nav m-auto mb-2 mb-lg-0 gap-3 justify-content-center">
+        <li class="nav-item">
+          <a data-bs-dismiss="offcanvas" class="nav-link" aria-current="page" [routerLink]="['/']">{{'الصفحة الرئيسيه'}} <i class="bi bi-arrow-left"></i></a>
+        </li>
+        
+        <li class="nav-item">
+          <a data-bs-dismiss="offcanvas" class="nav-link" [routerLink]="['/was-wir-sind']">{{'من نحن'}} <i class="bi bi-arrow-left"></i></a>
+        </li>
+
+        <li class="nav-item">
+          <a data-bs-dismiss="offcanvas" class="nav-link"
+            [routerLink]="['/was-wir-tun']">{{'ما نقوم به'}} <i class="bi bi-arrow-left"></i></a>
+        </li>
+
+        <li class="nav-item">
+          <a data-bs-dismiss="offcanvas" class="nav-link" [routerLink]="['/kontakt']">{{'تواصل معنا'}} <i class="bi bi-arrow-left"></i></a>
         </li>
       </ul>
     </div>

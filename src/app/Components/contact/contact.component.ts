@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  lang: string = localStorage.getItem('lang')! ?? 'due';
 
   constructor(private _SharedService: SharedService) {
 

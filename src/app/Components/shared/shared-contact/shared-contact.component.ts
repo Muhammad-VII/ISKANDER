@@ -4,7 +4,7 @@ import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { ChangeDetectionStrategy } from '@angular/core';
-
+declare const $: any;
 @Component({
   selector: 'app-shared-contact',
   templateUrl: './shared-contact.component.html',
@@ -14,6 +14,7 @@ import { ChangeDetectionStrategy } from '@angular/core';
 })
 export class SharedContactComponent implements OnInit, OnDestroy {
   subscribtions$: Subscription[] = [];
+  lang: string = localStorage.getItem('lang')! ?? 'due';
 
   constructor(
     private _SpinnerService: NgxSpinnerService,
@@ -32,7 +33,6 @@ export class SharedContactComponent implements OnInit, OnDestroy {
     ]),
   });
 
-  showSuccessBtn: boolean = false
   submitContactForm() {
     this._SpinnerService.show();
     if (!this.contactForm.valid) {
@@ -42,7 +42,11 @@ export class SharedContactComponent implements OnInit, OnDestroy {
           next: (val) => {
             this._SpinnerService.hide();
             this.contactForm.reset();
-            this.showSuccessBtn = true
+            $('#liveToast').addClass('show');
+            setTimeout(() => {
+              $('#liveToast').removeClass('show');
+            }
+            , 3000);
           },
           error: (err) => {
             this._SpinnerService.hide();

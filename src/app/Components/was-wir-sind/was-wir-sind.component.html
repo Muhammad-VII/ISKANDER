@@ -1,10 +1,30 @@
 <div *ngIf="wasWirSindData$ | async as wasWirSind">
-  <main>
+  <main *ngIf="lang == 'due'">
     <div class="main-text">
       <h2>Was Wir Sind</h2>
       <div class="breadcrumb">
         <a routerLink="/" class="active-bread">Home</a>
         <a class="not-active-bread" routerLink="/was-wir-sind"> / Was wir sind</a>
+      </div>
+    </div>
+  </main>
+
+  <main *ngIf="lang == 'en'">
+    <div class="main-text">
+      <h2>Who We Are</h2>
+      <div class="breadcrumb">
+        <a routerLink="/" class="active-bread">Home</a>
+        <a class="not-active-bread" routerLink="/was-wir-sind"> / Who we are</a>
+      </div>
+    </div>
+  </main>
+
+  <main *ngIf="lang == 'ar'">
+    <div class="main-text">
+      <h2>من نحن</h2>
+      <div class="breadcrumb">
+        <a routerLink="/" class="not-active-bread">الصفحه الرئيسية</a>
+        <a class="active-bread" routerLink="/was-wir-sind"> / من نحن</a>
       </div>
     </div>
   </main>
@@ -23,7 +43,7 @@
       <div class="modal-content">
         <div class="modal-header" style="background-color: rgba(0, 0, 0, 0.03);">
           <h1 class="modal-title fs-5" id="exampleModalLabel">{{model?.title}}</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button [class.m-0]="lang=='ar'" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="modal-content-wrapper">
@@ -40,13 +60,23 @@
                 <p>
                   {{model?.description}}
                 </p>
-                <div class="slide-action">
+                <div class="slide-action" *ngIf="lang=='en' || lang == 'due'">
                   <button data-bs-toggle="modal" [attr.data-bs-target]="'#'+'bts'+'md'+(i-1)">
                     <img src="assets/was-wir-sind/arrow-left.png" alt="" srcset="">
                   </button>
 
                   <button data-bs-toggle="modal" [attr.data-bs-target]="'#'+'bts'+'md'+(1+i)">
                     <img src="assets/was-wir-sind/arrow-right.png" alt="" srcset="">
+                  </button>
+                </div>
+
+                <div class="slide-action" *ngIf="lang=='ar'">
+                  <button data-bs-toggle="modal" [attr.data-bs-target]="'#'+'bts'+'md'+(i-1)">
+                    <img src="assets/was-wir-sind/arrow-right.png" alt="" srcset="">
+                  </button>
+
+                  <button data-bs-toggle="modal" [attr.data-bs-target]="'#'+'bts'+'md'+(1+i)">
+                    <img src="assets/was-wir-sind/arrow-left.png" alt="" srcset="">
                   </button>
                 </div>
               </article>

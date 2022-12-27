@@ -1,9 +1,29 @@
-<main>
+<main *ngIf="lang == 'due'">
   <div class="main-text">
-    <h2>Was wir tun</h2>
+    <h2>Was Wir Tun</h2>
     <div class="breadcrumb">
       <a routerLink="/" class="active-bread">Home</a>
-      <a class="not-active-bread" routerLink="/was-wir-tun">/ Was wir tun</a>
+      <a class="not-active-bread" routerLink="/was-wir-tun"> / Was wir tun</a>
+    </div>
+  </div>
+</main>
+
+<main *ngIf="lang == 'en'">
+  <div class="main-text">
+    <h2>What We Do</h2>
+    <div class="breadcrumb">
+      <a routerLink="/" class="active-bread">Home</a>
+      <a class="not-active-bread" routerLink="/was-wir-tun"> / What we do</a>
+    </div>
+  </div>
+</main>
+
+<main *ngIf="lang == 'ar'">
+  <div class="main-text">
+    <h2>ما نقوم به</h2>
+    <div class="breadcrumb">
+      <a routerLink="/" class="not-active-bread">الصفحه الرئيسية</a>
+      <a class="active-bread" routerLink="/was-wir-tun"> / ما نقوم به</a>
     </div>
   </div>
 </main>
@@ -24,8 +44,16 @@
             {{section?.description}}
           </p>
         </article>
-        <div class="redirect-link" [hidden]="section?.btnHidden">
+        <div *ngIf="lang == 'due'" class="redirect-link" [hidden]="section?.btnHidden">
           <a [routerLink]="['/was-wir-tun/ausländischen-Unternehmen']">Mehr erfahren <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div *ngIf="lang == 'en'" class="redirect-link" [hidden]="section?.btnHidden">
+          <a [routerLink]="['/was-wir-tun/ausländischen-Unternehmen']">Know more <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div *ngIf="lang == 'ar'" class="redirect-link" [hidden]="section?.btnHidden">
+          <a [routerLink]="['/was-wir-tun/ausländischen-Unternehmen']">اعرف اكثر <i class="bi bi-arrow-left"></i></a>
         </div>
       </div>
     </div>

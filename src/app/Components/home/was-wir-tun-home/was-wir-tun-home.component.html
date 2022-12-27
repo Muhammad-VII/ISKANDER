@@ -1,7 +1,7 @@
 <section class="what-we-do-section" [hidden]="data?.hidden">
   <div class="container">
     <header>
-      <h2>{{data?.title}}</h2>
+      <h2 [class.text-end]="lang=='ar'">{{data?.title}}</h2>
     </header>
 
     <article>
@@ -19,8 +19,16 @@
     </article>
     
     <div class="link-section" [hidden]="data?.btnHidden">
-      <a [routerLink]="['/was-wir-tun']">
+      <a *ngIf="lang == 'due'" [routerLink]="['/was-wir-tun']">
         Alle ansehen <i class="bi bi-arrow-right"></i>
+      </a>
+
+      <a *ngIf="lang == 'en'" [routerLink]="['/was-wir-tun']">
+        View all <i class="bi bi-arrow-right"></i>
+      </a>
+
+      <a *ngIf="lang == 'ar'" [routerLink]="['/was-wir-tun']">
+        عرض الكل <i class="bi bi-arrow-left"></i>
       </a>
     </div>
   </div>

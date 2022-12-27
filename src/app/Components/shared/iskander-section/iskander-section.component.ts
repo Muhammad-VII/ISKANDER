@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class IskanderSectionComponent {
   @Input() data: any;
+  lang: string = localStorage.getItem('lang')! ?? 'due';
+
 }

@@ -7,8 +7,6 @@
     }
   }
   header {
-    border-left: solid $main-theme 4px;
-    padding-left: 19px;
     h2 {
       font-family: Lato;
       font-size: 40px;
@@ -86,4 +84,16 @@
       }
     }
   }
+}
+
+.border-en {
+  border-left: solid $main-theme 4px;
+  padding-left: 19px;
+
+}
+
+.border-ar {
+  border-right: solid $main-theme 4px;
+  padding-right: 19px;
+
 }

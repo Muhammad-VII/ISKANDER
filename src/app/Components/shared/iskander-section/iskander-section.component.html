@@ -4,8 +4,8 @@
       <div class="col-md-6 iskander-image">
         <img src="{{data?.image}}" alt="Iskander image" class="w-100">
       </div>
-      <div class="col-md-6 d-flex flex-column justify-content-center">
-        <header>
+      <div class="col-md-6 d-flex flex-column justify-content-center" >
+        <header [class.border-en]="lang == 'due' || lang == 'en'" [class.border-ar]="lang=='ar'">
           <h2>{{data?.title}}</h2>
           <h4>{{data?.subTitle}}</h4>
           <p>{{data?.extraTitle}}</p>
@@ -22,7 +22,9 @@
         </figure>
 
         <div class="action" [hidden]="data?.btnHidden">
-          <a class="btn" [routerLink]="['/was-wir-sind']">Mehr Erfahren</a>
+          <a class="btn" *ngIf="lang == 'due'" [routerLink]="['/was-wir-sind']">Mehr Erfahren</a>
+          <a class="btn" *ngIf="lang == 'en'" [routerLink]="['/was-wir-sind']">Learn more</a>
+          <a class="btn" *ngIf="lang == 'ar'" [routerLink]="['/was-wir-sind']">اعرف اكثر</a>
         </div>
       </div>
     </div>

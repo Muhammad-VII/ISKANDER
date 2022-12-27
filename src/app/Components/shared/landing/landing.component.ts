@@ -6,5 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent {
+  lang: string = localStorage.getItem('lang')! ?? 'due';
+
   @Input() data: any;
 }

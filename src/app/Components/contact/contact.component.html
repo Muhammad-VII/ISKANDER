@@ -1,9 +1,25 @@
 <main>
-  <div class="main-text">
+  <div *ngIf="lang == 'due'" class="main-text">
     <h2>Kontakt</h2>
     <div class="breadcrumb">
       <a routerLink="/" class="active-bread">Home</a>
       <a class="not-active-bread"> / Kontakt</a>
+    </div>
+  </div>
+
+  <div *ngIf="lang == 'en'" class="main-text">
+    <h2>Contact</h2>
+    <div class="breadcrumb">
+      <a routerLink="/" class="active-bread">Home</a>
+      <a class="not-active-bread"> / Contact</a>
+    </div>
+  </div>
+
+  <div *ngIf="lang == 'ar'" class="main-text">
+    <h2>تواصل معنا</h2>
+    <div class="breadcrumb">
+      <a routerLink="/" class="not-active-bread">الصفحه الرئيسية</a>
+      <a class="active-bread"> / تواصل معنا</a>
     </div>
   </div>
 </main>
