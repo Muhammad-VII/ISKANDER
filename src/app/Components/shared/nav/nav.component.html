@@ -13,16 +13,8 @@
         <a class="nav-link dropdown-toggle d-flex align-items-center mt-1" [class.flex-row-reverse]="lang == 'ar'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="assets/Vector.svg" alt="" srcset="">
         </a>
-        <ul *ngIf="lang == 'due' || lang == 'en'" class="dropdown-menu">
-          <li><a class="dropdown-item" (click)="changeLanguage('due')">GR</a></li>
-          <li><a class="dropdown-item" (click)="changeLanguage('en')">EN</a></li>
-          <li><a class="dropdown-item" (click)="changeLanguage('ar')">AR</a></li>
-        </ul>
-
-        <ul *ngIf="lang == 'ar'" class="dropdown-menu">
-          <li><a class="dropdown-item" (click)="changeLanguage('due')">الالمانية</a></li>
-          <li><a class="dropdown-item" (click)="changeLanguage('en')">الانجليزية</a></li>
-          <li><a class="dropdown-item" (click)="changeLanguage('ar')">العربية</a></li>
+        <ul class="dropdown-menu">
+          <li [hidden]="lang.hidden" *ngFor="let lang of langueges$ | async"><a class="dropdown-item" (click)="changeLanguage(lang.code)">{{lang.name}}</a></li>
         </ul>
     </div>
   </div>

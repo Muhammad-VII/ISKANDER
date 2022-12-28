@@ -37,4 +37,8 @@ export class SharedService {
   getContactPageData(): Observable<any> {
     return this._HttpClient.get(`${environment.apiUrl}/contact-page/getAllSections-${this.lang}?limit=10&skip=0`)
   }
+
+  getAllLangs(): Observable<any> {
+    return this._HttpClient.get(`${environment.apiUrl}/settings/getAllLangueges`)
+  }
 }
