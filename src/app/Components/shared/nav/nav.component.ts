@@ -21,6 +21,7 @@ export class NavComponent implements OnInit {
 
   changeLanguage(lang: string) {
     localStorage.setItem('lang', lang);
+    document.querySelector('html')?.setAttribute('lang', lang);
     window.location.reload();
   }
 

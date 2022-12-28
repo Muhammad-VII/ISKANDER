@@ -18,14 +18,20 @@
         </div>
       </div>
       <div class="col-md-3">
-        <div class="footer-links">
+        <div class="footer-links" *ngIf="lang == 'en' || lang == 'due'">
           <a class="hvr-forward" [routerLink]="['/datenschutz']">Datenschutz</a>
           <a class="hvr-forward" [routerLink]="['/impressum']">Impressum</a>
         </div>
+
+        <div class="footer-links" *ngIf="lang == 'ar'">
+          <a class="hvr-forward" [routerLink]="['/datenschutz']">حماية البيانات</a>
+          <a class="hvr-forward" [routerLink]="['/impressum']">بصمة</a>
+        </div>
       </div>
       <div class="col-md-4">
-        <h5>Iskander-lbc	&nbsp;	&nbsp;	&nbsp;   |	&nbsp;	&nbsp;	&nbsp;   All Rights Reserved</h5>
-        <h6>© Copyright  2022</h6>
+        <h5 *ngIf="lang == 'due' || lang == 'en'">Iskander-lbc	&nbsp;	&nbsp;	&nbsp;   |	&nbsp;	&nbsp;	&nbsp;   All Rights Reserved</h5>
+        <h5 *ngIf="lang == 'ar'">إسكندر- إل بي سي	&nbsp;	&nbsp;	&nbsp;   |	&nbsp;	&nbsp;	&nbsp;   جميع الحقوق محفوظه</h5>
+        <h6>©  حقوق النشر  2022</h6>
       </div>
     </div>
   </div>

@@ -71,7 +71,11 @@
           </div>
 
           <div class="action">
-            <button title="Please fill the above form with the correct data first" type="submit" [disabled]="!contactForm.valid">Senden</button>
+            <button *ngIf="lang == 'due'" title="Please fill the above form with the correct data first" type="submit" [disabled]="!contactForm.valid">Senden</button>
+
+            <button *ngIf="lang == 'en'" title="Please fill the above form with the correct data first" type="submit" [disabled]="!contactForm.valid">Send</button>
+
+            <button *ngIf="lang == 'ar'" title="Please fill the above form with the correct data first" type="submit" [disabled]="!contactForm.valid">ارسل</button>
           </div>
         </form>
       </div>
