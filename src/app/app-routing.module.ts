@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'was-wir-tun/:id', component: WhatWeDoDetailsComponent },
   { path: 'impressum', component: ImpressumComponent },
   { path: 'datenschutz', component: DatenschutzComponent },
-  { path: 'kontakt', component: ContactComponent },
+  { path: 'Kontakt', component: ContactComponent },
   {
     path: 'support-for-foreign-companies',
     component: SupportForForeignCompaniesComponent,

@@ -21,7 +21,7 @@
 </section>
 <nav class="navbar navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" [routerLink]="['/']">
       <img src="assets/Group.svg" alt="" srcset="">
     </a>
     <button class="navbar-toggler" type="button"data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,9 +65,9 @@
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <a *ngIf="lang == 'due'" class="btn bg-white" type="button" [routerLink]="['/kontakt']">kontakt</a>
-        <a *ngIf="lang == 'en'" class="btn bg-white" type="button" [routerLink]="['/kontakt']">Contact</a>
-        <a *ngIf="lang == 'ar'" class="btn bg-white" type="button" [routerLink]="['/kontakt']">تواصل معنا</a>
+        <a *ngIf="lang == 'due'" class="btn bg-white" type="button" [routerLink]="['/Kontakt']">Kontakt</a>
+        <a *ngIf="lang == 'en'" class="btn bg-white" type="button" [routerLink]="['/Kontakt']">Contact</a>
+        <a *ngIf="lang == 'ar'" class="btn bg-white" type="button" [routerLink]="['/Kontakt']">تواصل معنا</a>
       </form>
     </div>
   </div>
@@ -97,7 +97,7 @@
         </li>
 
         <li class="nav-item">
-          <a data-bs-dismiss="offcanvas" class="nav-link" [routerLink]="['/kontakt']">{{'Kontakt'}} <i class="bi bi-arrow-right"></i></a>
+          <a data-bs-dismiss="offcanvas" class="nav-link" [routerLink]="['/Kontakt']">{{'Kontakt'}} <i class="bi bi-arrow-right"></i></a>
         </li>
       </ul>
 
@@ -117,7 +117,7 @@
         </li>
 
         <li class="nav-item">
-          <a data-bs-dismiss="offcanvas" class="nav-link" [routerLink]="['/kontakt']">{{'Kontakt'}} <i class="bi bi-arrow-right"></i></a>
+          <a data-bs-dismiss="offcanvas" class="nav-link" [routerLink]="['/Kontakt']">{{'Kontakt'}} <i class="bi bi-arrow-right"></i></a>
         </li>
       </ul>
 
@@ -136,7 +136,7 @@
         </li>
 
         <li class="nav-item">
-          <a data-bs-dismiss="offcanvas" class="nav-link" [routerLink]="['/kontakt']">{{'تواصل معنا'}} <i class="bi bi-arrow-left"></i></a>
+          <a data-bs-dismiss="offcanvas" class="nav-link" [routerLink]="['/Kontakt']">{{'تواصل معنا'}} <i class="bi bi-arrow-left"></i></a>
         </li>
       </ul>
     </div>
