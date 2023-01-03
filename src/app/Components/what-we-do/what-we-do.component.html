@@ -45,15 +45,15 @@
           </p>
         </article>
         <div *ngIf="lang == 'due'" class="redirect-link" [hidden]="section?.btnHidden">
-          <a [routerLink]="['/was-wir-tun/ausländischen-Unternehmen']">Mehr erfahren <i class="bi bi-arrow-right"></i></a>
+          <a [routerLink]="['/was-wir-tun', section?._id]">Mehr erfahren <i class="bi bi-arrow-right"></i></a>
         </div>
 
         <div *ngIf="lang == 'en'" class="redirect-link" [hidden]="section?.btnHidden">
-          <a [routerLink]="['/was-wir-tun/ausländischen-Unternehmen']">Know more <i class="bi bi-arrow-right"></i></a>
+          <a [routerLink]="['/was-wir-tun', section?._id]">Know more <i class="bi bi-arrow-right"></i></a>
         </div>
 
         <div *ngIf="lang == 'ar'" class="redirect-link" [hidden]="section?.btnHidden">
-          <a [routerLink]="['/was-wir-tun/ausländischen-Unternehmen']">اعرف اكثر <i class="bi bi-arrow-left"></i></a>
+          <a [routerLink]="['/was-wir-tun', section?._id]">اعرف اكثر <i class="bi bi-arrow-left"></i></a>
         </div>
       </div>
     </div>

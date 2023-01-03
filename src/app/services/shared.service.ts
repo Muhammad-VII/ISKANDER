@@ -41,4 +41,8 @@ export class SharedService {
   getAllLangs(): Observable<any> {
     return this._HttpClient.get(`${environment.apiUrl}/settings/getAllLangueges`)
   }
+
+  getWhatWeDoDetails(id: string): Observable<any> {
+    return this._HttpClient.get(`${environment.apiUrl}/war-wir-tun/getSectionById-${this.lang}/${id}`)
+  }
 }
