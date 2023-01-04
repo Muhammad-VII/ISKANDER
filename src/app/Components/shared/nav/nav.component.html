@@ -11,7 +11,7 @@
 
     <div class="language">
         <a class="nav-link dropdown-toggle d-flex align-items-center mt-1" [class.flex-row-reverse]="lang == 'ar'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="assets/Vector.svg" alt="" srcset="">
+          <img class="ms-1" src="assets/Vector.svg" alt="" srcset="">
         </a>
         <ul class="dropdown-menu">
           <li [hidden]="lang.hidden" *ngFor="let lang of langueges$ | async"><a class="dropdown-item" (click)="changeLanguage(lang.code)">{{lang.name}}</a></li>

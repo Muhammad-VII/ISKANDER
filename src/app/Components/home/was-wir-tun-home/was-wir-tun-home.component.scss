@@ -75,8 +75,11 @@
   }
 
   .link-section {
-    margin-top: 2rem;
+    margin-top: 1rem;
     text-align: end;
+    &:lang(ar) {
+      text-align: right;
+    }
     a {
       font-family: Lato;
       font-size: 21px;

@@ -1,6 +1,9 @@
 @import '../../../../styles.scss';
 .iskander-section {
   padding: 2rem 0rem;
+  &:lang(ar) {
+    direction: ltr;
+  }
   .iskander-image {
     @media (max-width: 768px) {
       margin-bottom: 1rem;
@@ -15,6 +18,9 @@
       letter-spacing: 0px;
       color: $main-theme;
       margin-bottom: 0.3rem;
+      &:lang(ar) {
+        text-align: right;
+      }
     }
     @media (max-width: 600px) {
       h2 {
@@ -30,6 +36,9 @@
       letter-spacing: 0px;
       color: #171729;
       margin-bottom: 0;
+      &:lang(ar) {
+        text-align: right;
+      }
       @media (max-width: 600px) {
         font-size: 22px;
         margin-bottom: 0;
@@ -41,6 +50,9 @@
       font-weight: 300;
       line-height: 36px;
       letter-spacing: 0px;
+      &:lang(ar) {
+        text-align: right;
+      }
       @media (max-width: 600px) {
         font-size: 22px;
         margin-bottom: 0;
@@ -55,6 +67,9 @@
       line-height: 30px;
       letter-spacing: 0px;
       color: #3f464b;
+      &:lang(ar) {
+        text-align: right;
+      }
     }
     @media (max-width: 600px) {
       margin-top: 1rem;
