@@ -1,6 +1,9 @@
 @import '../../../styles.scss';
 .datenschutz {
   padding: 3rem 0rem;
+  &:lang(ar) {
+    direction: ltr;
+  }
   h2 {
     font-family: Lato;
     font-size: 32px;

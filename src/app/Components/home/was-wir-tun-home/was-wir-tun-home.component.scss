@@ -62,7 +62,9 @@
           color: $main-theme-bright;
           font-family: Lato;
           font-size: 20px;
-          // white-space: nowrap;/
+          &:lang(ar) {
+            font-size: 18px;
+          }
           @media screen and (max-width: 600px) {
             font-size: 14px;
           }
@@ -82,7 +84,7 @@
     margin-top: 1rem;
     text-align: end;
     &:lang(ar) {
-      text-align: right;
+      text-align: left;
     }
     a {
       font-family: Lato;
