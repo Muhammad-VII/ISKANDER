@@ -1,13 +1,11 @@
 @import "../../../../styles.scss";
 .landing {
-  background-image: url(../../../../assets/home-bg.svg);
   height: 85vh;
   background-position: center center;
   background-size: cover;
   .landing-content {
     height: 100%;
     width: 100%;
-    background-image: url(../../../../assets/home/landing-content-bg.png);
     background-position: center center;
     background-size: cover;
     header {
@@ -18,7 +16,6 @@
         font-size: 60px;
         line-height: 86px;
         letter-spacing: 0.239208px;
-        text-transform: uppercase;
         color: $main-theme;
         @media screen and (max-width: 768px) {
           font-size: 48px;

@@ -14,6 +14,9 @@
       font-size: 13.28px;
       line-height: 24.14px;
       font-weight: 500;
+      &:lang(ar) {
+        font-family: Lato;
+      }
       a {
         color: #fff;
         text-decoration: none;
@@ -32,6 +35,12 @@ nav {
   }
   .navbar-collapse {
     gap: 19.9px;
+    ul {
+      &:lang(ar) {
+        margin-left: 0% !important;
+        margin-right: auto;
+      }
+    }
   }
   .nav-link {
     color: #fff;
