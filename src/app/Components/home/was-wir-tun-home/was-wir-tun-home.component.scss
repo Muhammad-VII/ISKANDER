@@ -62,6 +62,9 @@
           color: $main-theme-bright;
           font-family: Lato;
           font-size: 20px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
           &:lang(ar) {
             font-size: 18px;
           }

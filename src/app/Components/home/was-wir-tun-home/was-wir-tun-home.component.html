@@ -6,7 +6,7 @@
 
     <article>
       <div class="row">
-        <div class="col-md-4 mb-2" *ngFor="let card of data">
+        <div class="col-md-4 mb-2" *ngFor="let card of data" [routerLink]="['/was-wir-tun', card?._id]">
           <div class="what-we-do-card">
             <div class="card-img">
               <img class="w-100" src="{{card?.image}}" alt="glasess image">

@@ -36,6 +36,7 @@
 nav {
   background-color: $main-theme;
   padding-block: 15px;
+  direction: ltr;
   .navbar-nav {
     gap: 28.8px;
   }
@@ -43,8 +44,7 @@ nav {
     gap: 19.9px;
     ul {
       &:lang(ar) {
-        margin-left: 0% !important;
-        margin-right: auto;
+        flex-direction: row-reverse;
       }
     }
   }

@@ -26,7 +26,10 @@
                     <div>Telefon Nr.: </div>
                     <div>+49 (0) 351 847 1552</div>
                   </a>
-                  <a href="tel:+49 (0)3518211869">Telefax: +49 (0) 0351 821 1869</a>
+                  <a class="d-flex" href="tel:+49 (0)3518211869">
+                    <div>Telefax: </div>
+                    <div style="padding-left: 3px">&nbsp; &nbsp;&nbsp;&nbsp; +49 (0) 0351 821 1869</div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -47,7 +50,6 @@
           </div>
         </article>
       </div>
-
       <div class="col-md-6">
         <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()">
           <div class="form-group">
