@@ -2,7 +2,7 @@ import { SharedService } from './../../../services/shared.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable, map } from 'rxjs';
 import { ChangeDetectionStrategy } from '@angular/core';
 declare const $: any;
 @Component({
@@ -15,7 +15,12 @@ declare const $: any;
 export class SharedContactComponent implements OnInit, OnDestroy {
   subscribtions$: Subscription[] = [];
   lang: string = localStorage.getItem('lang')! ?? 'due';
-
+  pageData$: Observable<any> = this._SharedService.getContactPageData().pipe(
+    map((res) => {
+      console.log(res.data[1]);
+      return res.data[1];
+    })
+  );
   constructor(
     private _SpinnerService: NgxSpinnerService,
     private _SharedService: SharedService,
