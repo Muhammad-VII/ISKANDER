@@ -17,7 +17,6 @@ export class SharedContactComponent implements OnInit, OnDestroy {
   lang: string = localStorage.getItem('lang')! ?? 'due';
   pageData$: Observable<any> = this._SharedService.getContactPageData().pipe(
     map((res) => {
-      console.log(res.data[1]);
       return res.data[1];
     })
   );
