@@ -3,7 +3,7 @@
 
   <app-iskander-section [data]="homeData[1]"></app-iskander-section>
 
-  <app-was-wir-tun-home [data]="homeData[2]"></app-was-wir-tun-home>
+  <app-was-wir-tun-home [homeData]="homeData[2]" [data]="wasWirTunData$ | async"></app-was-wir-tun-home>
 
   <app-partnership-home [data]="homeData[3]" [bgColor]=false></app-partnership-home>
 </div>

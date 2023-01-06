@@ -1,12 +1,12 @@
-<section class="what-we-do-section" [hidden]="data?.hidden">
+<section class="what-we-do-section" [hidden]="homeData?.hidden">
   <div class="container">
     <header>
-      <h2 [class.text-end]="lang=='ar'">{{data?.title}}</h2>
+      <h2 [class.text-end]="lang=='ar'">{{homeData?.title}}</h2>
     </header>
 
     <article>
       <div class="row">
-        <div class="col-md-4 mb-2" *ngFor="let card of data?.media">
+        <div class="col-md-4 mb-2" *ngFor="let card of data">
           <div class="what-we-do-card">
             <div class="card-img">
               <img class="w-100" src="{{card?.image}}" alt="glasess image">

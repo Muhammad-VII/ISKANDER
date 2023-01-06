@@ -7,6 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class WasWirTunHomeComponent {
   @Input() data: any;
+  @Input() homeData: any;
   lang: string = localStorage.getItem('lang')! ?? 'due';
+  constructor() { 
+  }
 
 }
