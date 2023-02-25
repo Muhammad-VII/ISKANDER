@@ -13,7 +13,7 @@ import { WhatWeDoDetailsComponent } from './Components/what-we-do-details/what-w
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', redirectTo: '', pathMatch: 'full' },
-  { path: 'was-wir-sind', component: WasWirSindComponent },
+  { path: 'wer-wir-sind', component: WasWirSindComponent },
   { path: 'was-wir-tun', component: WhatWeDoComponent },
   { path: 'was-wir-tun/:id', component: WhatWeDoDetailsComponent },
   { path: 'impressum', component: ImpressumComponent },
